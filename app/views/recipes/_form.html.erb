@@ -1,23 +1,38 @@
- <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: name %>
-<% end %>
-
-<h1>Encontrou um erro nessa receita</h1>
-<p>Corrija utilizando os campos abaixo:</p>
 <%= form_for @recipe do |f| %>
 <%= f.label :title, "Título" %>
+<br/>
 <%= f.text_field :title %>
+<br/>
+<br/>
 <%= f.label :recipe_type, "Tipo da Receita" %>
+<br/>
 <%= f.text_field :recipe_type %>
+<br/>
+<br/>
 <%= f.label :cuisine, "Cozinha" %>
+<br/>
 <%= f.text_field :cuisine %>
+<br/>
+<br/>
 <%= f.label :difficulty, "Dificuldade" %>
+<br/>
 <%= f.text_field :difficulty %>
+<br/>
+<br/>
 <%= f.label :cook_time, "Tempo de Preparo" %>
+<br/>
 <%= f.text_field :cook_time %>
+<br/>
+<br/>
 <%= f.label :ingredients, "Ingredientes" %>
+<br/>
 <%= f.text_field :ingredients %>
+<br/>
+<br/>
 <%= f.label :cook_method, "Como Preparar" %>
+<br/>
 <%= f.text_field :cook_method %>
+<br/>
+
 <%= f.submit "Enviar" %>
 <%end%>
