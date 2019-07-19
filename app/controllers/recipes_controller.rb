@@ -33,6 +33,17 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    if @recipe.destroy
+      flash[:success] = "Receita vaporizada com sucesso."
+      redirect_to root_path
+    else
+      flash[:error] = "Nao foi possivel vaporizar essa receita"
+      render 'show'
+    end
+  end
+
   def show
     @recipe = Recipe.find(params[:id])
   end

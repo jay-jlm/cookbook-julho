@@ -4,9 +4,9 @@
 <%= f.text_field :title %>
 <br/>
 <br/>
-<%= f.label :recipe_type, "Tipo da Receita" %>
+<%= f.label :recipe_type_id, "Tipo da Receita" %>
 <br/>
-<%= f.text_field :recipe_type %>
+<%= f.collection_select(:recipe_type_id, RecipeType.all, :id, :name) %>
 <br/>
 <br/>
 <%= f.label :cuisine, "Cozinha" %>
